@@ -13,7 +13,9 @@
             <ul class="nav navbar-nav">
                 @if(isset($menu_items))
                     @foreach($menu_items as $item)
-                        <li class="{!! LaravelAcl\Library\Views\Helper::get_active_route_name($item->getRoute()) !!}"> <a href="{!! $item->getLink() !!}">{!!$item->getName()!!}</a></li>
+                        <li class="{!! LaravelAcl\Library\Views\Helper::get_active_route_name($item->getRoute()) !!}">
+                            <a href="{!! $item->getLink() !!}">{!!$item->getName()!!}</a>
+                        </li>
                     @endforeach
                 @endif
             </ul>
@@ -21,7 +23,8 @@
                 <li class="dropdown dropdown-user">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="dropdown-profile">
                         @include('laravel-authentication-acl::admin.layouts.partials.avatar', ['size' => 30])
-                        <span id="nav-email">{!! isset($logged_user) ? $logged_user->email : 'User' !!}</span> <i class="fa fa-caret-down"></i>
+                        <span id="nav-email">{!! isset($logged_user) ? $logged_user->mobile_number : 'User' !!}</span>
+                        <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu">
                             <li>

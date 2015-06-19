@@ -17,9 +17,11 @@ class CreateUsersTable extends Migration {
         {
             $table->increments('id');
             $table->string('email');
+            $table->string('mobile_number', 20);
             $table->string('password');
             $table->text('permissions')->nullable();
             $table->boolean('activated')->default(0);
+            $table->boolean('is_seller')->default(0);
             $table->boolean('banned')->default(0);
             $table->string('activation_code')->nullable();
             $table->timestamp('activated_at')->nullable();
@@ -30,6 +32,7 @@ class CreateUsersTable extends Migration {
             $table->timestamps();
             // setup index
             $table->unique('email');
+            $table->unique('mobile_number');
             $table->index('activation_code');
             $table->index('reset_password_code');
         });

@@ -65,6 +65,14 @@
                             <span class="text-danger">{!! $errors->first('email') !!}</span>
                         </div>
 
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-mobile"></i></span>
+                                {!! Form::text('mobile_number', '', ['id' => 'mobile_number', 'class' => 'form-control', 'placeholder' => 'Mobile Number', 'required', 'autocomplete' => 'off']) !!}
+                            </div>
+                            <span class="text-danger">{!! $errors->first('mobile_number') !!}</span>
+                        </div>
+
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">

@@ -24,8 +24,8 @@ Admin login
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                                    {!! Form::email('email', '', ['id' => 'email', 'class' => 'form-control', 'placeholder' => 'Email address', 'required', 'autocomplete' => 'off']) !!}
+                                    <span class="input-group-addon"><i class="fa fa-mobile"></i></span>
+                                    {!! Form::text('mobile_number', '', ['id' => 'mobile_number', 'class' => 'form-control', 'placeholder' => 'Mobile Number', 'required', 'autocomplete' => 'off']) !!}
                                 </div>
                             </div>
                         </div>
